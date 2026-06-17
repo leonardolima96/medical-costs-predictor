@@ -1,0 +1,18 @@
+# Ambiente virtual
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+#VS Code
+.vscode/
+
+#Logs
+logs/*.log
+
+#Modelos treinados
+data/gold/*.pkl
+
+#noteboook
+.ipynb_checkpoints/
