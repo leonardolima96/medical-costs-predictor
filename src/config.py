@@ -16,4 +16,5 @@ SRC_DIR = ROOT_DIR / "src"
 # Arquivos 
 
 INSURANCE_FILE = BRONZE_DIR / "insurance.csv"
+EDA_REPORT = LOG_DIR / "eda_report.txt"
 
