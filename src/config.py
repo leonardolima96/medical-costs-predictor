@@ -17,4 +17,7 @@ SRC_DIR = ROOT_DIR / "src"
 
 INSURANCE_FILE = BRONZE_DIR / "insurance.csv"
 EDA_REPORT = LOG_DIR / "eda_report.txt"
+SILVER_FILE = SILVER_DIR / "insurance_tratado.csv"
+
+TREATMENT_REPORT = LOG_DIR / "treatment_report.txt"
 

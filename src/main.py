@@ -1,6 +1,8 @@
 from utils.logger import get_logger
 from config import INSURANCE_FILE
 from ingestao import carregar_dados
+from exploracao import explorar_dados
+from tratamento import tratar_dados
 
 logger = get_logger(__name__)
 def main():
@@ -9,6 +11,8 @@ def main():
     logger.info("Iniciando pipeline")
 
     df = carregar_dados(INSURANCE_FILE)
+    df = explorar_dados(df)
+    df = tratar_dados(df)
 
     logger.info("Pipeline finalizada")
     

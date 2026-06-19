@@ -1,0 +1,17 @@
+======================================================================
+RELATÓRIO DE TRATAMENTO DOS DADOS
+======================================================================
+
+Gerado em: 18/06/2026 22:28:45
+
+Registros antes do tratamento : 1338
+Registros após o tratamento   : 1337
+Duplicados removidos          : 1
+Valores nulos tratados        : 0
+
+Arquivo salvo em:
+C:\Users\leona\Desktop\Léo\DEV PATH\DEVinHouse\Módulo 03\Mini Projeto\data\silver\insurance_tratado.csv
+
+======================================================================
+FIM DO RELATÓRIO
+======================================================================
