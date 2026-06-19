@@ -2,8 +2,6 @@ import logging
 from logging.handlers import RotatingFileHandler
 from config import LOG_DIR
 
-LOG_DIR.mkdir(parents=True, exist_ok=True)
-
 
 def get_logger(nome: str) -> logging.Logger:
     logger = logging.getLogger(nome)

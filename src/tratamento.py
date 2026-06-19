@@ -2,7 +2,7 @@ from datetime import datetime
 
 import pandas as pd
 
-from config import SILVER_FILE, TREATMENT_REPORT
+from config import TREATED_DATA_FILE, TREATMENT_REPORT
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -42,9 +42,9 @@ def salvar_silver(df: pd.DataFrame) -> None:
         df: DataFrame tratado.
     """
 
-    df.to_csv(SILVER_FILE, index=False)
+    df.to_csv(TREATED_DATA_FILE, index=False)
 
-    logger.info(f"Dataset salvo em: {SILVER_FILE}")
+    logger.info(f"Dataset salvo em: {TREATED_DATA_FILE}")
 
 
 def gerar_relatorio_tratamento(
@@ -70,7 +70,7 @@ def gerar_relatorio_tratamento(
         arquivo.write(f"Registros após o tratamento   : {linhas_depois}\n")
         arquivo.write(f"Duplicados removidos          : {duplicados_removidos}\n")
         arquivo.write("Valores nulos tratados        : 0\n")
-        arquivo.write(f"\nArquivo salvo em:\n{SILVER_FILE}\n")
+        arquivo.write(f"\nArquivo salvo em:\n{TREATED_DATA_FILE}\n")
 
         arquivo.write(f"\n{SEPARADOR}\n")
         arquivo.write("FIM DO RELATÓRIO\n")

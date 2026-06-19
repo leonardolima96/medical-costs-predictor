@@ -1,0 +1,2 @@
+Modelo,MAE,RMSE,R²
+RandomForestRegressor,2632.78,4697.78,0.88

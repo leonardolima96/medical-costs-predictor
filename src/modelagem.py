@@ -40,7 +40,7 @@ def avaliar_modelo(modelo, X_test, y_test):
         "MAE": round(mae,2),
         "RMSE": round(rmse,2),
         "R²": round(r2,2),
-        "Predições": round(predicoes,2)
+        "Predições": predicoes
     }
     
 def comparar_modelos(resultado_linear: dict, resultado_rf: dict, modelo_linear, modelo_rf):
@@ -73,17 +73,12 @@ def comparar_modelos(resultado_linear: dict, resultado_rf: dict, modelo_linear, 
         melhor_modelo = modelo_rf
         melhor_resultado = resultado_rf
 
-    logger.info(f"Melhor modelo: {melhor_modelo['Modelo']}")
-    print(f"\n🏆 Melhor modelo: {melhor_modelo['Modelo']}")
+    logger.info(f"Melhor modelo: {melhor_resultado["Modelo"]}")
+    print(f"\n🏆 Melhor modelo: {melhor_resultado["Modelo"]}")
 
     return melhor_modelo, melhor_resultado
 
-def executar_modelagem(
-    X_train,
-    X_test,
-    y_train,
-    y_test
-):
+def executar_modelagem(X_train,X_test, y_train, y_test):
     logger.info("Iniciando modelagem")
     modelo_linear = treinar_regressao(X_train, y_train)
     
@@ -102,10 +97,10 @@ def executar_modelagem(
     )
     
     melhor_modelo, melhor_resultado = comparar_modelos(
-        modelo_linear,
-        modelo_rf,
         resultado_linear,
-        resultado_rf)
+        resultado_rf,
+        modelo_linear,
+        modelo_rf)
 
     
     logger.info("Modelagem Concluída")
